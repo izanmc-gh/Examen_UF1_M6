@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/moonPhase.css">
+
+</head>
+<body>
+<div>
+    <input id="date" type="date" onchange="loadFigure()">
+    <div id="moonPhase">
+        <figure class="Beauty">
+            <figcaption>
+                <h3 id="data"></h3>
+            </figcaption>
+            <img id="imgDiv" alt="">
+            <figcaption>
+                <cite id="nom"></cite>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+
+<script>
+
+    addEventListener("load",()=>{});
+
+    function loadDate(){
+        var date = document.getElementById("date").value;
+        document.getElementById("data").innerHTML = date;
+    }
+
+    var Pic = "";
+
+    function loadImage(pic){
+        let divLocation = document.getElementById("imgDiv");
+        let imgElement = document.createElement("img");
+        imgElement.src = pic;
+        divLocation.append(imgElement);
+        var date = document.getElementById("date").value;
+        date.getDay();
+
+        var dia = getMoonAge(date);
+
+        if (dia === 1){
+            Pic="img/Moon001.png";
+        }
+    }
+
+    function loadName(){
+        var date = document.getElementById("date").value;
+        date.getMonth();
+        document.getElementById("nom").innerHTML = getMoonPhase(date);
+    }
+
+    function loadFigure(){
+        loadDate();
+        loadImage(Pic);
+        loadName();
+    }
+
+</script>
+
+</body>
+</html>

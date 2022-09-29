@@ -1,0 +1,32 @@
+div, h1{
+    text-align: center;
+    
+}
+
+figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 25% ; 
+    background-repeat: no-repeat; 
+    width:25%; 
+    text-align: center; 
+    border: 3px solid green;
+}
+
+figure.Troglo{
+    background-image: url(../img/Troglo.png);
+}
+
+figure.Beauty{
+    background-image: url(../img/Beauty.png);
+}
+
+figure.HairDresser{
+    background-image: url(../img/HairDresser.png);
+}
+figure img{
+    width: 50%;
+}
+
+
